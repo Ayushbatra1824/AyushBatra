@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .header {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 200;
+    color: #000;
+    text-decoration: none;
+    height: 100%;
+}
+
+.work {
+    background-color: #F15843; /* Red */
+    flex: 7;
+    justify-content: flex-start;
+    padding-left: 20px;
+}
+
+.contact {
+    background-color: #FFC107; /* Yellow */
+    flex: 3;
+    justify-content: flex-end;
+    padding-right: 40px;
+}
+
+    .section {
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .left-content {
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .brand {
+        font-size: 5rem;
+        font-weight: bold;
+        margin-top: 60px;
+        margin-left: 30px;
+        opacity: 0;
+        animation: fadeInUp 0.8s ease-in-out forwards;
+        animation-delay: 0.3s;
+    }
+
+    .title {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        margin-left: 30px;
+        opacity: 0;
+        animation: fadeInUp 0.8s ease-in-out forwards;
+        animation-delay: 0.5s;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+        color: #666;
+        margin-bottom: 40px;
+        margin-left: 30px;
+    }
+
+    .description {
+        font-size: 1rem;
+        line-height: 1.4;
+        margin-top: 300px;
+        margin-bottom: 10px;
+        max-width: 400px;
+        margin-left: 30px;
+        align-self: flex-start;
+        text-align: left;
+        opacity: 0;
+        animation: fadeInUp 0.8s ease-in-out forwards;
+        animation-delay: 0.7s;
+    }
+
+    .right-content {
+        background-color: #0277BD;
+        min-height: 100vh;
+        position: relative;
+    }
+
+    .right-content img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        animation: fadeInUp 1s ease-in-out forwards;
+        animation-delay: 0.6s;
+    }
+
+   
+    .sketch-img {
+        width: 100%;
+        max-width: 1300px; /* Or your preferred max width */
+        height: auto;
+        margin: 0 auto; /* Center the image */
+        display: block;
+        object-fit: contain;
+        margin-top:100px;
+        margin-bottom:100px;
+        opacity: 0;
+        animation: fadeInUp 1s ease-in-out forwards;
+        animation-delay: 0.4s;
+    }
+
+    .artwork-img {
+        width: 100%;
+        max-width: 1300px; /* Or your preferred max width */
+        height: auto;
+        margin: 0 auto; /* Center the image */
+        display: block;
+        object-fit: contain;
+        margin-top:100px;
+        margin-bottom:100px;
+        opacity: 0;
+        animation: fadeInUp 1s ease-in-out forwards;
+        animation-delay: 0.4s;
+    }
+
+    .gifs {
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .left-side {
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .right-side {
+        max-height:auto;
+        position: relative;
+        margin-left: 120px;
+        
+    }
+
+    .gif-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 300px); /* 2 columns of 300px each */
+        grid-template-rows: repeat(2, 300px); /* 2 rows of 300px each */
+        gap: 20px; /* Space between gifs */
+        margin-left: 0.85cm; /* Align with other content */
+        margin-top: 40px; /* Space from above content */
+    }
+
+    .gif-item {
+        width: 300px;
+        height: 300px;
+        overflow: hidden;
+        opacity: 0;
+        animation: fadeInUp 0.8s ease-in-out forwards;
+    }
+
+    .gif-item:nth-child(1) { animation-delay: 0.2s; }
+    .gif-item:nth-child(2) { animation-delay: 0.4s; }
+    .gif-item:nth-child(3) { animation-delay: 0.6s; }
+    .gif-item:nth-child(4) { animation-delay: 0.8s; }
+
+    .gif-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    
+
+    .vincent-image {
+    height: 620px; /* Matches height of gif grid (300px * 2 + 20px gap) */
+    width: auto;
+        object-fit: cover;
+        margin-top:70px;
+        opacity: 0;
+        animation: fadeInUp 0.8s ease-in-out forwards;
+        animation-delay: 0.6s;
+    }
+
+
+    .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    height: auto;
+    position: relative;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-in-out forwards;
+    animation-delay: 0.2s;
+    }
+
+    .social-and-text {
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+    }
+
+    .social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    }
+
+    .social-icon img {
+        width: 24px;
+        height: 24px;
+        
+    }
+
+    .instagram-icon {
+        width: 35px; /* Scaled up by 10% */
+        height: 35px;
+        scale:180%;
+    }
+
+    .connect-text {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #ffffff;
+    font-size: 60px;
+    font-weight: 200;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    text-align: left;
+    margin-left: 60px; /* Space between icons and text */
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-in-out forwards;
+    animation-delay: 0.5s;
+    }
+
+    .monogram img {
+    width: 60px;
+    height: auto;
+    scale:300%;
+    margin-right:40px;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-in-out forwards;
+    animation-delay: 0.7s;
+}
+
+    .social-icon:hover {
+        opacity: 0.8;
+        transition: opacity 0.2s ease;
+    }
+
+
+.back-arrow {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    font-size: 36px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 30px;
+    transition: transform 0.2s ease;
+    margin-left:30px;
+}
+
+.back-arrow:hover {
+    transform: scale(1.2);
+}
+
+   
+
+
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header">
+            <a href="work-final.html" class="nav-link work">WORK</a>
+            <a href="contact-me.html" class="nav-link contact">CONTACT ME</a>
+            </div>
+        </header>
+    
+    <section class="section">
+        <div class="left-content">
+            <a href="work-final.html" class="back-arrow animate-on-scroll stagger-1">←</a>
+            <h1 class="brand">Sketchbook </h1>
+            <h2 class="title">Previews</h2>
+            
+            <p class="description">
+                A designer's sketchbook offers a glimpse into their ideas, communication skills, and the depths of their imagination and artistic vision. As art and design are closely related, I present a selection of my artwork in a few snippets.
+            </p>
+        </div>
+        <div class="right-content">
+            <div class="icons">
+                <div class="icon"></div>
+                <div class="icon"></div>
+                <div class="icon"></div>
+                <div class="icon"></div>
+                <div class="icon"></div>
+            </div>
+            <img src="sketchbook-prev.png" alt="sketches" />
+        </div>
+    </section>
+
+    <section class="sketchbook-grid">
+        <div class="sketches">
+            <img src="sketchbook-grid.png" alt="sketchbook-1" class="sketch-img"/>
+        </div>
+    </section>
+
+    <section class="sketchbook-grid-1"></section>
+        <div class="sketches-1">
+            <img src="book-des-grid.png" alt="sketchbook-1" class="sketch-img"/>
+        </div>
+    </section>
+
+    <section class="gifs">
+    
+        <div class="left-side">
+            <div class="gif-grid">
+                <div class="gif-item">
+                    <img src="gif_-psd.gif" alt="GIF 1">
+                </div>
+                <div class="gif-item">
+                    <img src="class_gif_2 2.gif" alt="GIF 2">
+                </div>
+                <div class="gif-item">
+                    <img src="IMG_8382.GIF" alt="GIF 3">
+                </div>
+                <div class="gif-item">
+                    <img src="CLASS_GIF.gif" alt="GIF 4">
+                </div>
+            </div>
+        </div>
+        <div class="right-side">
+            <img src="3.jpg" alt="vincent" class="vincent-image"/>
+        </div>
+    
+    </section> 
+
+    <section class="paintings">
+        <div class="artwork">
+            <img src="artwork-grid.png" alt="artwork" class="artwork-img"/>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer">
+            <div class="social-and-text">
+                <div class="social-links">
+                    <a href="https://www.instagram.com/_ayushbatra/" class="social-icon">
+                        <img src="insta-new.png" alt="Instagram" class="instagram-icon">
+                    </a>
+                    <a href="https://www.linkedin.com/in/ayush-batra-ba0729165/" class="social-icon">
+                        <img src="linkedin-new.png" alt="LinkedIn">
+                    </a>
+                    <a href="https://www.behance.net/ayushbatra3" class="social-icon">
+                        <img src="behance-new.png" alt="Behance">
+                    </a>
+                </div>
+                <div class="connect-text">
+                    LET'S<br>CONNECT
+                </div>
+            </div>
+            <div class="monogram">
+                <img src="monogram.png" alt="Monogram">
+            </div>
+        </div>
+    </footer>
+
+
+    
+</body>
+</html>

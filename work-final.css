@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 200;
+    color: #000;
+    text-decoration: none;
+    height: 100%;
+}
+
+.work {
+    background-color: #F15843; /* Red */
+    flex: 7;
+    justify-content: flex-start;
+    padding-left: 20px;
+}
+
+.contact {
+    background-color: #FFC107; /* Yellow */
+    flex: 3;
+    justify-content: flex-end;
+    padding-right: 40px;
+}
+
+
+.layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+}
+
+.left-content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    
+    gap:10px;
+}
+
+.brand {
+    font-size: 5rem;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-left:30px;
+    margin-bottom:0;
+    position: relative;
+    cursor: pointer;
+}
+
+.brand::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+/* Link the headings to their respective pages */
+.brand[data-href]::after {
+    cursor: pointer;
+}
+
+/* Optional: Add hover effect */
+.brand:hover {
+    opacity: 0.8;
+}
+
+.description {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    margin-top: -100px;
+    max-width: 500px;
+    margin-left:30px;
+    margin-top:400px;
+}
+
+.right-content {
+    background-color: #0277BD;
+    height: 100vh;
+    overflow: hidden;
+    display:flex;
+  
+}
+
+.right-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block; /* Added */
+    flex: 1; /* Added */
+    min-width: 100%; /* Added */
+    min-height: 100%; /* Added */
+    
+    
+}
+
+.spacer {
+    height: 0px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    height: auto;
+    position: relative;
+}
+
+.social-and-text {
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.social-icon img {
+    width: 24px;
+    height: 24px;
+    
+}
+
+.instagram-icon {
+    width: 35px; /* Scaled up by 10% */
+    height: 35px;
+    scale:180%;
+}
+
+.connect-text {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #ffffff;
+    font-size: 60px;
+    font-weight: 200;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    text-align: left;
+    margin-left: 60px; /* Space between icons and text */
+}
+
+.monogram img {
+    width: 60px;
+    height: auto;
+    scale:300%;
+    margin-right:40px;
+}
+
+.social-icon:hover {
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+}
+
+
+.back-arrow {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    font-size: 36px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 30px;
+    transition: transform 0.2s ease;
+    margin-left:30px;
+}
+
+.back-arrow:hover {
+    transform: scale(1.2);
+}
+
+.right-content img {
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.right-content img:hover {
+    transform: scale(1.05);
+}
+
+/* Optional: Add hover effects */
+.brand:hover, .right-content img:hover {
+    opacity: 0.8;
+}
+
+[src="gradient.png"] {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-left: -1px; /* This will help hide any potential gap */
+    transform: scale(1.02); /* Slightly scale up to ensure full coverage */
+}

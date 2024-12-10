@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        .header {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 200;
+    color: #000;
+    text-decoration: none;
+    height: 100%;
+}
+
+.work {
+    background-color: #F15843; /* Red */
+    flex: 7;
+    justify-content: flex-start;
+    padding-left: 20px;
+}
+
+.contact {
+    background-color: #FFC107; /* Yellow */
+    flex: 3;
+    justify-content: flex-end;
+    padding-right: 40px;
+}
+
+        .section {
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .left-content {
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .brand {
+        font-size: 5rem;
+        font-weight: bold;
+        margin-top: 60px;
+        margin-left: 25px;
+    }
+
+    .title {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        margin-left: 30px;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+        color: #666;
+        margin-bottom: 10px;
+        margin-left: 30px;
+    }
+
+    .description {
+        font-size: 1rem;
+        line-height: 1.4;
+        margin-top: 600px;
+        margin-bottom: 0px;
+        max-width: 400px;
+        margin-left: 30px;
+        
+        align-self: flex-start;
+        text-align: left;
+    }
+
+        .right-content {
+            
+            min-height: 100vh;
+            position: relative;
+        }
+
+        .right-content img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+       
+
+        /* Main Content */
+        .main-container {
+            display: flex;
+            width: 100%;
+            position: relative;
+        }
+
+        .content-left {
+            width: 50%;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand {
+            font-size: 82px;
+            font-weight: 900;
+            margin-top: 60px;
+            padding-left: 0.85cm;
+            line-height: 1;
+            text-align: left;
+            margin-bottom: 0;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: 400;
+            padding-left: 0.85cm;
+            margin-top: 10px;
+            line-height: 1.2;
+            text-align: left;
+            margin-bottom: 0;
+        }
+
+        .subtitle {
+            font-size: 20px;
+            font-weight: 300;
+            color: #666;
+            padding-left: 0.85cm;
+            margin-top: 5px;
+            line-height: 1.2;
+            text-align: left;
+        }
+
+        .description {
+            font-size: 1rem;
+            line-height: 1.4;
+            padding-left: 0.85cm;
+            position: absolute;
+            bottom: 60px;
+            text-align: left;
+            max-width: 600px;
+        }
+
+        .content-right {
+            width: 50%;
+            position: relative;
+            margin-top: -60px; /* Aligns with header bottom */
+        }
+
+        .single-image {
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            width: 100%;
+        }
+
+        .sleeve-img {
+            height:434px;
+            width: auto;
+            object-fit: cover;
+            margin-top:85px;
+        }
+
+        .mockups {
+            width:auto;
+            margin-top:45px;
+            
+        }
+
+
+    .right-content-1 {
+        max-height:auto;
+        position: relative;
+        margin-left: 120px;
+        
+    }
+
+    .left-content-1 {
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-left:60px;
+    }
+
+    .section-1 {
+        position: relative;
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .eco-img {
+        width: 100%;
+        max-width: 90%; /* Or your preferred max width */
+        height: auto;
+        margin: 0 auto; /* Center the image */
+        display: block;
+        object-fit: contain;
+        margin-top:100px;
+    }
+
+    .ecosystem-img {
+        width: 100%;
+        max-width: 90%; /* Or your preferred max width */
+        height: auto;
+        margin: 0 auto; /* Center the image */
+        display: block;
+        object-fit: contain;
+        margin-top:0px;
+    }
+
+    .type-img {
+        width: 100%;
+        max-width: 90%; /* Or your preferred max width */
+        height: auto;
+        margin: 0 auto; /* Center the image */
+        display: block;
+        object-fit: contain;
+        margin-top:50px;
+
+    }
+
+    .vinyl-img {
+        width: 100%;
+        max-width: 90%; /* Or your preferred max width */
+        height: auto;
+        margin: 0 auto; /* Center the image */
+        display: block;
+        object-fit: contain;
+        margin-top:50px;
+
+    }
+
+    .postage-stamp-img {
+        width: 100%;
+        max-width: 90%; /* Or your preferred max width */
+        height: auto;
+        margin: 0 auto; /* Center the image */
+        display: block;
+        object-fit: contain;
+        margin-top:50px;
+
+    }
+
+    .posters-img {
+        width: 100%;
+        max-width: 90%; /* Or your preferred max width */
+        height: auto;
+        margin: 0 auto; /* Center the image */
+        display: block;
+        object-fit: contain;
+        margin-top:50px;
+
+    }
+
+    .hocd-img {
+        width: 100%;
+        max-width: 90%; /* Or your preferred max width */
+        height: auto;
+        margin: 0 auto; /* Center the image */
+        display: block;
+        object-fit: contain;
+        margin-top:50px;
+
+    }
+
+    .stamp-img {
+        width: 100%;
+        max-width: 90%; /* Or your preferred max width */
+        height: auto;
+        margin: 0 auto; /* Center the image */
+        display: block;
+        object-fit: contain;
+        margin-top:100px;
+
+    }
+
+    .posters-img {
+        width: 100%;
+        max-width: 90%; /* Or your preferred max width */
+        height: auto;
+        margin: 0 auto; /* Center the image */
+        display: block;
+        object-fit: contain;
+        margin-top:100px;
+
+    }
+
+    .market-img {
+        width: 100%;
+        max-width: 90%; /* Or your preferred max width */
+        height: auto;
+        margin: 0 auto; /* Center the image */
+        display: block;
+        object-fit: contain;
+        margin-top:100px;
+        margin-bottom: 100px;
+
+    }
+
+    .raw {
+        overflow-x: auto;
+        white-space: nowrap;
+        padding: 20px 0;
+    }
+
+    .raw-container {
+        display: flex;
+        gap: 10px;
+    }
+
+    .scroll-image {
+        width: 500px; /* Adjust width as needed */
+        height: auto;
+        display: inline-block;
+    }
+
+    .raw-text-img {
+        width: 100%;
+        max-width: 80%; /* Or your preferred max width */
+        height: auto;
+        margin: 0 auto; /* Center the image */
+        display: block;
+        object-fit: contain;
+        margin-top:50px;
+        margin-bottom: 50px;
+
+    }
+
+    .canyon-oak {
+        overflow-x: auto;
+        white-space: nowrap;
+        padding: 20px 0;
+    }
+
+    .canyon-oak-container {
+        display: flex;
+        gap: 10px;
+    }
+
+    .scroll-image-co {
+        width: 500px; /* Adjust width as needed */
+        height: 350px;
+        display: inline-block;
+    }
+
+
+  
+.footer {
+    background-color: #000000;
+    padding: 40px 40px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.social-and-text {
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.social-icon img {
+    width: 24px;
+    height: 24px;
+    
+}
+
+.instagram-icon {
+    width: 35px; /* Scaled up by 10% */
+    height: 35px;
+    scale:180%;
+}
+
+.connect-text {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #ffffff;
+    font-size: 60px;
+    font-weight: 200;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    text-align: left;
+    margin-left: 60px; /* Space between icons and text */
+}
+
+.monogram img {
+    width: 60px;
+    height: auto;
+    scale:300%;
+    margin-right:40px;
+}
+
+.social-icon:hover {
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+}
+
+/* Add these animation keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Add these classes to your existing styles */
+.brand, .title, .subtitle, .description {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-in-out forwards;
+}
+
+.brand { animation-delay: 0.2s; }
+.title { animation-delay: 0.4s; }
+.subtitle { animation-delay: 0.6s; }
+.description { animation-delay: 0.8s; }
+
+.right-content img, 
+.sleeve-img, 
+.mockups,
+.ecosystem-img,
+.type-img,
+.vinyl-img,
+.eco-img,
+.hocd-img,
+.stamp-img,
+.posters-img,
+.market-img {
+    opacity: 0;
+    animation: fadeInUp 1s ease-in-out forwards;
+    animation-delay: 0.4s;
+}
+
+.scroll-image,
+.scroll-image-co {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-in-out forwards;
+}
+
+/* Add different delays for scroll images */
+.raw-container img:nth-child(n) {
+    animation-delay: calc(0.2s * var(--i));
+}
+
+.canyon-oak-container img:nth-child(n) {
+    animation-delay: calc(0.2s * var(--i));
+}
+
+.footer {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-in-out forwards;
+    animation-delay: 0.2s;
+}
+
+.back-arrow {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    font-size: 36px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 30px;
+    transition: transform 0.2s ease;
+    margin-left:30px;
+}
+
+.back-arrow:hover {
+    transform: scale(1.2);
+}
+
+
+
+        
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header">
+            <a href="work-final.html" class="nav-link work">WORK</a>
+            <a href="contact-me.html" class="nav-link contact">CONTACT ME</a>
+            </div>
+        </header>
+    
+    <section class="section">
+        <div class="left-content">
+            <a href="work-final.html" class="back-arrow animate-on-scroll stagger-1">←</a>
+            <h1 class="brand">University</h1>
+            <h2 class="title">Student</h2>
+            <div class="subtitle">
+                Assignements 
+            </div>
+            <p class="description">
+                In the academic realm, I am continiously presented with a diverse array of projects and assignments that beckon us to transcend the ordinary, forge new pathways of thought, and sculpt something extraordinary. Take on the challenge to think beyond the usual, let your creativity soar, and explore new design ideas and styles.
+            </p>
+        </div>
+        <div class="right-content">
+            
+            <img src="bg 1.png" alt="uni" />
+        </div>
+    </section>
+
+    <section class="section-1">
+        <div class="left-content-1">
+            <img src="mockups.gif" alt="mockups" class="mockups"/>
+        </div>
+        <div class="right-content-1">
+            <div class="icons">
+                <img src="sleeve-type-grid.png" alt="sleeve-type-grid" class="sleeve-img"/>
+            </div>
+        </div>
+    </section>
+
+    <section class="book-2">
+        <div class="ecosystem">
+            <img src="ecosystem-comp-art.png" alt="ecosystem" class="ecosystem-img"/>
+        </div>
+    </section>
+
+    <section class="book-3">
+        <div class="grid ">
+            <img src="book-grid-type.png" alt="type" class="type-img"/>
+        </div>
+    </section>
+
+    <section class="vinyl-cover">
+        <div class="vinyl-des ">
+            <img src="vinyl-cover-des.png" alt="vinyl" class="vinyl-img"/>
+        </div>
+    </section>
+
+    <section class="postage-eco">
+        <div class="eco-stamp ">
+            <img src="postage-stamp-eco.png" alt="ecostamp" class="eco-img"/>
+        </div>
+    </section>
+
+    <section class="poster">
+        <div class="hocd-posters ">
+            <img src="hocdpsters.png" alt="hocd" class="hocd-img"/>
+        </div>
+    </section>
+
+
+    <section class="postagetsamps">
+        <div class="hocd-stamps ">
+            <img src="postage-stamp.png" alt="stamp" class="stamp-img"/>
+        </div>
+    </section>
+
+
+    <section class="poster-series">
+        <div class="posters ">
+            <img src="posters-grid.png" alt="posters" class="posters-img"/>
+        </div>
+    </section>
+
+    <section class="farmers-market">
+        <div class="market-design ">
+            <img src="farmers-market-grid.png" alt="market" class="market-img"/>
+        </div>
+    </section>
+
+    <section class="raw">
+        <div class="raw-container">
+            <img src="RAW_COVER.PNG" alt="Image 1" class="scroll-image" style="--i:1">
+            <img src="img1.PNG" alt="Image 2" class="scroll-image" style="--i:2">
+            <img src="img2.PNG" alt="Image 3" class="scroll-image" style="--i:3">
+            <img src="img3.PNG" alt="Image 4" class="scroll-image" style="--i:4">
+            <img src="img4.PNG" alt="Image 5" class="scroll-image" style="--i:5">
+            <img src="img5.PNG" alt="Image 6" class="scroll-image" style="--i:6">
+            <img src="img6.PNG" alt="Image 7" class="scroll-image" style="--i:7">
+            <img src="img7.PNG" alt="Image 8" class="scroll-image" style="--i:8">
+            <img src="img8.PNG" alt="Image 9" class="scroll-image" style="--i:9">
+            <img src="img10.PNG" alt="Image 10" class="scroll-image" style="--i:10">
+            <img src="img9.PNG" alt="Image 11" class="scroll-image" style="--i:11">
+            
+        </div>
+    </section>
+
+    <section class="raw-text">
+        <div class="raw-text-container">
+            <img src="raw-text.png" alt="raw-text" class="raw-text-img"/>
+        </div>
+    </section>
+
+    <section class="canyon-oak">
+        <div class="canyon-oak-container">
+            <img src="co1.png" alt="Image 1" class="scroll-image-co" style="--i:1">
+            <img src="co2.png" alt="Image 2" class="scroll-image-co" style="--i:2">
+            <img src="co3.png" alt="Image 3" class="scroll-image-co" style="--i:3">
+            <img src="co4.png" alt="Image 4" class="scroll-image-co" style="--i:4">
+            <img src="co5.png" alt="Image 5" class="scroll-image-co" style="--i:5">
+            <img src="co6.png" alt="Image 6" class="scroll-image-co" style="--i:6">
+            <img src="co7.png" alt="Image 7" class="scroll-image-co" style="--i:7">
+            <img src="co8.png" alt="Image 8" class="scroll-image-co" style="--i:8">
+            <img src="co9.png" alt="Image 9" class="scroll-image-co" style="--i:9">
+            <img src="co10.png" alt="Image 10" class="scroll-image-co" style="--i:10">
+            <img src="co11.png" alt="Image 11" class="scroll-image-co" style="--i:11">
+            <img src="co12.png" alt="Image 11" class="scroll-image-co" style="--i:12">
+            
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="footer">
+            <div class="social-and-text">
+                <div class="social-links">
+                    <a href="https://www.instagram.com/_ayushbatra/" class="social-icon">
+                        <img src="insta-new.png" alt="Instagram" class="instagram-icon">
+                    </a>
+                    <a href="https://www.linkedin.com/in/ayush-batra-ba0729165/" class="social-icon">
+                        <img src="linkedin-new.png" alt="LinkedIn">
+                    </a>
+                    <a href="https://www.behance.net/ayushbatra3" class="social-icon">
+                        <img src="behance-new.png" alt="Behance">
+                    </a>
+                </div>
+                <div class="connect-text">
+                    LET'S<br>CONNECT
+                </div>
+            </div>
+            <div class="monogram">
+                <img src="monogram.png" alt="Monogram">
+            </div>
+        </div>
+    </footer>
+
+</body>
+</body>
+</html>

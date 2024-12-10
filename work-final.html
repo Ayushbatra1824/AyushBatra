@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="work-final.css" />
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+        <div class="header">
+            <a href="work-final.html" class="nav-link work">WORK</a>
+            <a href="contact-me.html" class="nav-link contact">CONTACT ME</a>
+            </div>
+        </header>
+    
+    <div class="layout">
+        <div class="left-content">
+            <a href="home.html" class="back-arrow animate-on-scroll stagger-1">←</a>
+            <h1 class="brand" data-href="svnh.html">SVNH</h1>
+            <p class="description">Working with Abstract art pieces for foxfire print from the Suomi series of Shivan and Narresh.</p>
+        </div>
+        <div class="right-content">
+            <img src="IMG_4720.jpg" alt="Fashion photograph with models in colorful clothing" data-href="svnh.html"/>
+        </div>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div class="layout">
+        <div class="left-content">
+            <h1 class="brand" data-href="brand.html" >Branding & Identity Projects</h1>
+            <p class="description">Involves the entire process of brainstorming, ideation, logo, applications and AD campaigns with in-depth research.</p>
+        </div>
+        <div class="right-content">
+            <img src="Artboard 3@4x 2.png" alt="type" data-href="brand.html"/>
+        </div>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div class="layout">
+        <div class="left-content">
+            <h1 class="brand" data-href="hengx.html">Corporate Identity</h1>
+            <p class="description">Identity and store for a brand selling sewing machines and parts in fashion technology as an importer from Hengx, Shanghai, China.</p>
+        </div>
+        <div class="right-content">
+            <img src="hengx.png" alt="type" data-href="hengx.html"/>
+        </div>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div class="layout">
+        <div class="left-content">
+            <h1 class="brand" data-href="KT.html">Kreative Talkative</h1>
+            <p class="description"> Kreative Talkative is dedicated to the Spirit of the Creator, offering a unique lens into the essence of creativity across all walks of life.</p>
+        </div>
+        <div class="right-content">
+            <img src="kt.png" alt="type" data-href="KT.html" />
+        </div>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div class="layout">
+        <div class="left-content">
+            <h1 class="brand" data-href="uniersity.html">University Work</h1>
+            <p class="description"> Embarking on a creative journey, delving into diverse design themes and projects within the university realm. Simultaneously honing skills in 3D software and the Adobe Suite to unleash boundless creativity.</p>
+        </div>
+        <div class="right-content">
+            <img src="gradient.png" alt="gradient" data-href="uniersity.html"/>
+        </div>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div class="layout">
+        <div class="left-content">
+            <h1 class="brand" data-href="sketchbook.html">Sketchbook Previews</h1>
+            <p class="description"> It's the birthplace of ideas, and here's a sneak peek into the visual symphony unfolding within my creative haven (updated).</p>
+        </div>
+        <div class="right-content">
+            <img src="sketchbook.png" alt="drawings"  data-href="sketchbook.html"/>
+        </div>
+    </div>
+    <div>
+      
+     <footer>
+            <div class="footer">
+                <div class="social-and-text">
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/_ayushbatra/" class="social-icon">
+                            <img src="insta-new.png" alt="Instagram" class="instagram-icon">
+                        </a>
+                        <a href="https://www.linkedin.com/in/ayush-batra-ba0729165/" class="social-icon">
+                            <img src="linkedin-new.png" alt="LinkedIn">
+                        </a>
+                        <a href="https://www.behance.net/ayushbatra3" class="social-icon">
+                            <img src="behance-new.png" alt="Behance">
+                        </a>
+                    </div>
+                    <div class="connect-text">
+                        LET'S<br>CONNECT
+                    </div>
+                </div>
+                <div class="monogram">
+                    <img src="monogram.png" alt="Monogram">
+                </div>
+            </div>
+    </footer>
+    
+    <script>
+        document.addEventListener('click', function(e) {
+            const brand = e.target.closest('.brand');
+            if (brand) {
+                const href = brand.getAttribute('data-href');
+                if (href) {
+                    window.location.href = href;
+                }
+            }
+        });
+        
+        // Handle images
+    const img = e.target.closest('img[data-href]');
+    if (img) {
+        const href = img.getAttribute('data-href');
+        if (href) {
+            window.location.href = href;
+        }
+    }
+    </script>
+  
+
+</body>
+
+</html>

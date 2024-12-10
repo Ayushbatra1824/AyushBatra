@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    .header {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 200;
+    color: #000;
+    text-decoration: none;
+    height: 100%;
+}
+
+.work {
+    background-color: #F15843; /* Red */
+    flex: 7;
+    justify-content: flex-start;
+    padding-left: 20px;
+}
+
+.contact {
+    background-color: #FFC107; /* Yellow */
+    flex: 3;
+    justify-content: flex-end;
+    padding-right: 40px;
+}
+
+
+    .section {
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .left-content {
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .brand {
+        font-size: 5rem;
+        font-weight: bold;
+        margin-top: 60px;
+        margin-left: 30px;
+        opacity: 0;
+        animation: fadeInUp 0.8s ease-in-out forwards;
+        animation-delay: 0.3s;
+    }
+
+    .title {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        margin-left: 30px;
+        opacity: 0;
+        animation: fadeInUp 0.8s ease-in-out forwards;
+        animation-delay: 0.5s;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+        color: #666;
+        margin-bottom: 40px;
+        margin-left: 30px;
+        opacity: 0;
+        animation: fadeInUp 0.8s ease-in-out forwards;
+        animation-delay: 0.7s;
+    }
+
+    .description {
+        font-size: 1rem;
+        line-height: 1.4;
+        margin-top: 300px;
+        margin-bottom: 10px;
+        max-width: 400px;
+        margin-left: 30px;
+        align-self: flex-start;
+        text-align: left;
+        opacity: 0;
+        animation: fadeInUp 0.8s ease-in-out forwards;
+        animation-delay: 0.9s;
+    }
+
+    .right-content {
+        background-color: #0277BD;
+        min-height: 100vh;
+        position: relative;
+    }
+
+    .right-content img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        animation: fadeInUp 1s ease-in-out forwards;
+        animation-delay: 0.6s;
+    }
+
+    
+
+    .work1-image {
+        width: 100%;
+        max-width: 1300px; /* Or your preferred max width */
+        height: auto;
+        margin: 0 auto; /* Center the image */
+        display: block;
+        object-fit: contain;
+        opacity: 0;
+        animation: fadeInUp 1s ease-in-out forwards;
+        animation-delay: 1s;
+    }
+
+     .work2-image {
+        width: 100%;
+        max-width: 1300px; /* Or your preferred max width */
+        height: auto;
+        margin: 0 auto; /* Center the image */
+        display: block;
+        object-fit: contain;
+    }
+
+     .work3-image {
+        width: 100%;
+        max-width: 1300px; /* Or your preferred max width */
+        height: auto;
+        margin: 0 auto; /* Center the image */
+        display: block;
+        object-fit: contain;
+    }
+
+     .work4-image {
+        width: 100%;
+        max-width: 1300px; /* Or your preferred max width */
+        height: auto;
+        margin: 0 auto; /* Center the image */
+        display: block;
+        object-fit: contain;
+    }
+
+     .work5-image {
+        width: 100%;
+        max-width: 1300px; /* Or your preferred max width */
+        height: auto;
+        margin: 0 auto; /* Center the image */
+        display: block;
+        object-fit: contain;
+    }
+
+     .description-caption {
+        font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+     font-weight: 300;
+     font-size: 24px;
+     line-height: 1.4;
+        color: #000;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom:60px;
+    }
+
+    .caption-container {
+        width: 100%;
+     display: flex;
+     justify-content: center; /* Centers horizontally */
+     align-items: center; /* Centers vertically */
+        padding: 40px 0;
+        margin-top: auto;
+        margin-bottom: 40px;
+    }
+
+   
+    .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    height: auto;
+    position: relative;
+}
+
+.social-and-text {
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.social-icon img {
+    width: 24px;
+    height: 24px;
+    
+}
+
+.instagram-icon {
+    width: 35px; /* Scaled up by 10% */
+    height: 35px;
+    scale:180%;
+}
+
+.connect-text {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #ffffff;
+    font-size: 60px;
+    font-weight: 200;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    text-align: left;
+    margin-left: 60px; /* Space between icons and text */
+}
+
+.monogram img {
+    width: 60px;
+    height: auto;
+    scale:300%;
+    margin-right:40px;
+}
+
+.social-icon:hover {
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+}
+
+.showereel {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.showreel-video {
+    width: 100%;  /* Makes video take up 80% of the container width */
+    max-width: 1440px;  /* Maximum width of the video */
+    height: auto;
+    display: block;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    opacity: 0;
+    animation: fadeInUp 1s ease-in-out forwards;
+    animation-delay: 0.8s;
+}
+
+.mute-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.mute-button:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.mute-button img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.back-arrow {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    font-size: 36px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 30px;
+    transition: transform 0.2s ease;
+    margin-left:30px;
+}
+
+.back-arrow:hover {
+    transform: scale(1.2);
+}
+
+
+
+
+</style>
+
+</head>
+<body>
+   
+
+    <header>
+        <div class="header">
+            <a href="work-final.html" class="nav-link work">WORK</a>
+            <a href="contact-me.html" class="nav-link contact">CONTACT ME</a>
+            </div>
+        </header>
+    
+    <section class="section">
+        <div class="left-content">
+            <a href="work-final.html" class="back-arrow animate-on-scroll stagger-1">←</a>
+            <h1 class="brand">Kreative Talkative</h1>
+            <h2 class="title">Creative Intern</h2>
+            <div class="subtitle">
+                Art direction | Social Media | Production management |  <br>
+                Web Design | Show<br>
+            </div>
+            <p class="description">
+                Kreative Talkative is a celebration of the Creator’s journey, dedicated to capturing the essence of creativity that drives extraordinary visions in every corner of life. Through their exclusive talk show and digital films, they redefine the art of seeing into the art of storytelling, diving deep into the processes and perspectives that shape our world.
+            </p>
+        </div>
+        <div class="right-content">
+            <img src="kt.png" alt="hengx" />
+        </div>
+    </section>
+
+    <section class="showereel">
+        <div class="video-container">
+            <video 
+                class="showreel-video" 
+                autoplay 
+                loop 
+                muted 
+                playsinline
+                id="myVideo"
+            >
+                <source src="showreel.mp4" type="video/mp4">
+            </video>
+            <button class="mute-button" id="muteButton">
+                <img src="unmute.png" alt="Toggle sound" id="muteIcon">
+            </button>
+        </div>
+    </section>
+
+    <section class="work1">
+        <div class="image1">
+            <a href="https://www.youtube.com/watch?v=1z7z06Vckdg" target="_blank" class="work-link" rel="noopener noreferrer">
+               <img src="ktwork1.png" alt="work1" class="work1-image" />
+            </a>
+       </div>    
+    </section>
+
+    <section class="work2">
+        <div class="image2">
+            <img src="ktwork2.png" alt="work2" class="work2-image" />
+       </div>    
+    </section>
+
+    <section class="work3-image">
+        <div class="image3">
+            <a href="https://www.youtube.com/watch?v=VFtC3pPjyrw&list=PLmjGZ8R8KPjUPDBX83ybFRWN2ZXSa-_59&index=6" target="_blank" class="work-link" rel="noopener noreferrer">
+               <img src="ktwork3.png" alt="work3" class="work3-image" />
+            </a>
+       </div>    
+    </section>
+
+    <section class="work4">
+        <div class="image4">
+            <a href="https://www.youtube.com/watch?v=AGjV7ogTq58&list=PLmjGZ8R8KPjUPDBX83ybFRWN2ZXSa-_59&index=4" target="_blank" class="work-link" rel="noopener noreferrer"></a>
+               <img src="ktwork4.png" alt="work4" class="work4-image" />
+            </a>
+       </div>    
+    </section>
+
+    <section class="work5"></section>
+        <div class="image5">
+            <a href="https://www.youtube.com/watch?v=6YUyWlEkxJQ&list=PLmjGZ8R8KPjUPDBX83ybFRWN2ZXSa-_59&index=2" target="_blank" class="work-link" rel="noopener noreferrer">
+               <img src="ktwork5.png" alt="work5" class="work5-image" />
+            </a>
+       </div>    
+    </section>
+
+     <section class="caption-container"></section>
+        <div class="caption">
+            <p class="description-caption">Upcoming work: 3 more episodes of Kreative Talkative Vol 3 and Ultratech brand film : Bangalore </p>
+       </div>    
+    </section>
+
+    <div>
+    
+        <footer>
+            <div class="footer">
+                <div class="social-and-text">
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/_ayushbatra/" class="social-icon">
+                            <img src="insta-new.png" alt="Instagram" class="instagram-icon">
+                        </a>
+                        <a href="https://www.linkedin.com/in/ayush-batra-ba0729165/" class="social-icon">
+                            <img src="linkedin-new.png" alt="LinkedIn">
+                        </a>
+                        <a href="https://www.behance.net/ayushbatra3" class="social-icon">
+                            <img src="behance-new.png" alt="Behance">
+                        </a>
+                    </div>
+                    <div class="connect-text">
+                        LET'S<br>CONNECT
+                    </div>
+                </div>
+                <div class="monogram">
+                    <img src="monogram.png" alt="Monogram">
+                </div>
+            </div>
+    </footer>
+    
+
+    <script>
+        const video = document.getElementById('myVideo');
+        const muteButton = document.getElementById('muteButton');
+        const muteIcon = document.getElementById('muteIcon');
+
+        muteButton.addEventListener('click', function() {
+            if (video.muted) {
+                video.muted = false;
+                muteIcon.src = "mute.png";  // Change to your mute icon
+            } else {
+                video.muted = true;
+                muteIcon.src = "unmute.png";  // Change to your unmute icon
+            }
+        });
+    </script>
+
+</body>
+</html>

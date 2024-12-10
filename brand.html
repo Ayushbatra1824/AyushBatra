@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+         }
+
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            height: 60px;
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            font-weight: 200;
+            color: #000;
+            text-decoration: none;
+            height: 100%;
+        }
+
+        .work {
+            background-color: #F15843; /* Red */
+            flex: 7;
+            justify-content: flex-start;
+            padding-left: 20px;
+        }
+
+        .contact {
+            background-color: #FFC107; /* Yellow */
+            flex: 3;
+            justify-content: flex-end;
+            padding-right: 40px;
+        }
+
+
+        .section {
+             min-height: 100vh;
+             display: grid;
+            grid-template-columns: 1fr 1fr;
+            }
+
+         .left-content {
+             padding: 40px;
+             display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            }
+
+        .brand {
+            font-size: 5rem;
+            font-weight: bold;
+            margin-top: 60px;
+            margin-left: 30px;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-in-out forwards;
+            animation-delay: 0.3s;
+            }
+
+                
+
+                .description {
+                    font-size: 1rem;
+                    line-height: 1.4;
+                    margin-top: 300px;
+                    margin-bottom: 10px;
+                    max-width: 400px;
+                    margin-left: 30px;
+                    align-self: flex-start;
+                    text-align: left;
+                    opacity: 0;
+                    animation: fadeInUp 0.8s ease-in-out forwards;
+                    animation-delay: 0.9s;
+                }
+
+                .right-content {
+                
+                    min-height: 100vh;
+                    position: relative;
+                    margin-top: 0px;
+                }
+
+                .right-content img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    opacity: 0;
+                    animation: fadeInUp 1s ease-in-out forwards;
+                    animation-delay: 0.6s;
+                }
+
+                .ankors-img {
+                width: 100%;
+                max-width: 80%; /* Or your preferred max width */
+                height: auto;
+                margin: 0 auto; /* Center the image */
+                display: block;
+                object-fit: contain;
+                margin-top:100px;
+                opacity: 0;
+                animation: fadeInUp 1s ease-in-out forwards;
+                animation-delay: 0.8s;
+            }
+
+            .mucem-brand {
+                width: 100%;
+                max-width: 80%; /* Or your preferred max width */
+                height: auto;
+                margin: 0 auto; /* Center the image */
+                display: block;
+                object-fit: contain;
+                margin-top:100px;
+                opacity: 0;
+                animation: fadeInUp 1s ease-in-out forwards;
+                animation-delay: 0.8s;
+            }
+
+            .mucem-grid-guides {
+                width: 100%;
+                max-width: 80%; /* Or your preferred max width */
+                height: auto;
+                margin: 0 auto; /* Center the image */
+                display: block;
+                object-fit: contain;
+                margin-top:100px;
+                opacity: 0;
+                animation: fadeInUp 1s ease-in-out forwards;
+                animation-delay: 0.8s;
+            }
+
+            .db-studio-grid {
+                width: 100%;
+                max-width: 70%; /* Or your preferred max width */
+                height: auto;
+                margin: 0 auto; /* Center the image */
+                display: block;
+                object-fit: contain;
+                margin-top:100px;
+                margin-bottom: 100px;
+                opacity: 0;
+                animation: fadeInUp 1s ease-in-out forwards;
+                animation-delay: 0.8s;
+            }
+
+
+
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 100%;
+            margin: 0 auto;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            padding: 40px;
+            height: auto;
+            position: relative;
+        }
+
+        .social-and-text {
+            display: flex;
+            align-items: center;
+            margin-left: 40px;
+        }
+
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .social-icon img {
+            width: 24px;
+            height: 24px;
+            
+        }
+
+        .instagram-icon {
+            width: 35px; /* Scaled up by 10% */
+            height: 35px;
+            scale:180%;
+        }
+
+        .connect-text {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            color: #ffffff;
+            font-size: 60px;
+            font-weight: 200;
+            line-height: 1;
+            letter-spacing: -0.02em;
+            text-align: left;
+            margin-left: 60px; /* Space between icons and text */
+        }
+
+        .monogram img {
+            width: 60px;
+            height: auto;
+            scale:300%;
+            margin-right:40px;
+        }
+
+        .social-icon:hover {
+            opacity: 0.8;
+            transition: opacity 0.2s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Main content animations */
+        .brand {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-in-out forwards;
+            animation-delay: 0.3s;
+        }
+
+        .title {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-in-out forwards;
+            animation-delay: 0.5s;
+        }
+
+        .description {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-in-out forwards;
+            animation-delay: 0.7s;
+        }
+
+        /* Image animations */
+        .sleeve-img, 
+        .mockups,
+        .ecosystem-img,
+        .type-img,
+        .vinyl-img,
+        .eco-img,
+        .hocd-img,
+        .stamp-img,
+        .posters-img,
+        .market-img {
+            opacity: 0;
+            animation: fadeInUp 1s ease-in-out forwards;
+            animation-delay: 0.6s;
+        }
+
+        /* Right content image */
+        .right-content img {
+            opacity: 0;
+            animation: fadeInUp 1s ease-in-out forwards;
+            animation-delay: 0.4s;
+        }
+
+        .back-arrow {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    font-size: 36px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 30px;
+    transition: transform 0.2s ease;
+    margin-left:30px;
+}
+
+.back-arrow:hover {
+    transform: scale(1.2);
+}
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header">
+            <a href="work-final.html" class="nav-link work">WORK</a>
+            <a href="contact-me.html" class="nav-link contact">CONTACT ME</a>
+            </div>
+        </header>
+    
+    <section class="section">
+        <div class="left-content">
+            <a href="work-final.html" class="back-arrow animate-on-scroll stagger-1">←</a>
+            <h1 class="brand">Branding & Identity Projects </h1>
+            <p class="description">
+                I had to work on specific branding projects that covered everything from the theoretical business structure of the company to the ideal creation of its identity and campaigning in order to comprehend narrative structuring for branding and marketing in communication design. Mind mapping, brainstorming, mood board creation, industry and competitor analysis, SWOT, PEST, and Porter's Five Factor analysis, brand structure mission, statements, products, values, value proposition canvas, business ecosystem, and lastly creating the logo and identity are all part of this drawn-out process.
+            </p>
+        </div>
+        <div class="right-content">
+            <img src="brands.png" alt="uni" />
+        </div>
+    </section>
+
+    <section class="ankors">
+        <div class="ankors-grid">
+            <img src="ankors-grid.png" alt="ankors-grid" class="ankors-img" />
+        </div>
+    </section>
+
+    <section class="mucem">
+        <div class="mucem-gif">
+            <img src="mockups.gif" alt="mucem-book" class="mucem-brand" />
+        </div>
+    </section>
+
+    <section class="mucem-identity">
+        <div class="mucem-grid">
+            <img src="mucem-grid.png" alt="mucem-grid" class="mucem-grid-guides" />
+        </div>
+    </section>
+
+    <section class="diyabahl">
+        <div class="db-studio">
+            <img src="diya-bahl-grid.png" alt="diya-bahl-grid" class="db-studio-grid" />
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer">
+            <div class="social-and-text">
+                <div class="social-links">
+                    <a href="https://www.instagram.com/_ayushbatra/" class="social-icon">
+                        <img src="insta-new.png" alt="Instagram" class="instagram-icon">
+                    </a>
+                    <a href="https://www.linkedin.com/in/ayush-batra-ba0729165/" class="social-icon">
+                        <img src="linkedin-new.png" alt="LinkedIn">
+                    </a>
+                    <a href="https://www.behance.net/ayushbatra3" class="social-icon">
+                        <img src="behance-new.png" alt="Behance">
+                    </a>
+                </div>
+                <div class="connect-text">
+                    LET'S<br>CONNECT
+                </div>
+            </div>
+            <div class="monogram">
+                <img src="monogram.png" alt="Monogram">
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
