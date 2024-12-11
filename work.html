@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+    
+    @font-face {
+        font-family: Rokiest;
+        src: url('Rokiest-Black.otf');
+        }
+
+     
+
+    .section {
+            margin-bottom: 40px;
+        }
+
+    .headline {
+            font-size: 32px;
+            color: navy;
+            margin-bottom: 10px;
+        }
+
+    .subheading {
+            font-size: 24px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+    .body-text {
+            font-size: 16px;
+            color: #777;
+            margin-bottom: 20px;
+        }
+
+    .grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 15px;
+        }
+
+    .grid img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Customize grid item sizes for aesthetics */
+     .grid img:nth-child(1) {
+            grid-column: span 3;
+            grid-row: span 2;
+        }
+
+    .grid img:nth-child(2) {
+            grid-column: span 2;
+        }
+
+    .grid img:nth-child(3) {
+            grid-column: span 1;
+        }
+
+    .grid img:nth-child(4) {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+    .grid img:nth-child(5) {
+            grid-column: span 2;
+        }
+
+    .grid img:nth-child(6) {
+            grid-column: span 1;
+        }
+
+    .grid img:nth-child(7) {
+            grid-column: span 3;
+        }
+
+    @media (max-width: 1200px) {
+            .grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+    @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .grid img:nth-child(1),
+            .grid img:nth-child(4),
+            .grid img:nth-child(7) {
+                grid-column: span 2;
+            }
+        }
+
+    @media (max-width: 480px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+   
+
+    </style>
+</head>
+<body>
+
+    <div class="section">
+        <h1 class="headline">SHIVAN & NARRESH</h1>
+        <h2 class="subheading">Art Director & Asst. Print Designer </h2>
+        <p class="body-text">
+            SHIVAN & NARRESH is India’s first luxury holiday brand that was launched in Cannes at ‘Mare di Moda’ with its 100% stitch-free swim line. 
+            The brand has a unique signature style that is bold, confident & sophisticated. 
+            With a keen focus on holiday lifestyles, the brand’s offering encompasses the modern wardrobe of holiday connoisseurs. 
+            The new collection 'foxfires" is based on abstract themed art prints and the one of the blue coloured prints has been exclusively 
+            crafted for Walkers & Co at Cannes Film Festival.</p>
+
+        <div class="grid">
+            <img src="Artboard 1@4x.png" alt="Image 1">
+            <img src="Artboard 2@4x.png" alt="Image 2">
+            <img src="Artboard 3@4x.png" alt="Image 3">
+            <img src="Artboard 4@4x.png" alt="Image 4">
+            <img src="Artboard 5@4x.png" alt="Image 5">
+            <img src="link-to-your-image6.jpg" alt="Image 6">
+            <img src="link-to-your-image7.jpg" alt="Image 7">
+        </div>
+    </div>
+  
+    
+
+
+
+</body>
+</html>
+
+
