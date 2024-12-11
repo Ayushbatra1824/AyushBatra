@@ -122,9 +122,16 @@
                 }
             }
             
-            // Handle image clicks
+           // Handle image clicks
             const img = e.target.closest('img[data-href]');
             if (img) {
                 const href = img.getAttribute('data-href');
                 if (href) {
-                    w
+                    window.location.href = href;
+                }
+            }
+        });
+    </script>
+  
+</body>
+</html>
