@@ -17,12 +17,12 @@
     
     <div class="layout">
         <div class="left-content">
-            <a href="home.html" class="back-arrow animate-on-scroll stagger-1">←</a>
+            <a href="index.html" class="back-arrow animate-on-scroll stagger-1">←</a>
             <h1 class="brand" data-href="svnh.html">SVNH</h1>
             <p class="description">Working with Abstract art pieces for foxfire print from the Suomi series of Shivan and Narresh.</p>
         </div>
         <div class="right-content">
-            <img src="IMG_4720.jpg" alt="Fashion photograph with models in colorful clothing" data-href="svnh.html"/>
+            <img src="IMG_4715.jpg" alt="Fashion photograph with models in colorful clothing" data-href="svnh.html"/>
         </div>
     </div>
 
@@ -113,6 +113,7 @@
     
     <script>
         document.addEventListener('click', function(e) {
+            // Handle brand clicks
             const brand = e.target.closest('.brand');
             if (brand) {
                 const href = brand.getAttribute('data-href');
@@ -120,19 +121,10 @@
                     window.location.href = href;
                 }
             }
-        });
-        
-        // Handle images
-    const img = e.target.closest('img[data-href]');
-    if (img) {
-        const href = img.getAttribute('data-href');
-        if (href) {
-            window.location.href = href;
-        }
-    }
-    </script>
-  
-
-</body>
-
-</html>
+            
+            // Handle image clicks
+            const img = e.target.closest('img[data-href]');
+            if (img) {
+                const href = img.getAttribute('data-href');
+                if (href) {
+                    w
