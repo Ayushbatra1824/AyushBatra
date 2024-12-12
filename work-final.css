@@ -42,7 +42,8 @@ body {
 .layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 100vh;
+    height: calc(100vh - 60px);
+    
 }
 
 .left-content {
@@ -94,7 +95,7 @@ body {
 
 .right-content {
     background-color: #0277BD;
-    height: 100vh;
+    height: 100%;
     overflow: hidden;
     display:flex;
   
