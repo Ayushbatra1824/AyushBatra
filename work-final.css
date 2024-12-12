@@ -42,7 +42,7 @@ body {
 .layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: calc(100vh - 60px);
+    height: 100vh;
     
 }
 
